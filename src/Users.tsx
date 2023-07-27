@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react"
 import type { User } from "./User";
+import Table from "./Table";
 
 const Users = () => {
-    const [Users, setUsers] = useState(Array<User[]>());
+    const [Users, setUsers] = useState(Array<User>());
     useEffect(() => {
       fetch('https://randomuser.me/api/?results=50')
         .then(res => res.json())
@@ -13,7 +14,7 @@ const Users = () => {
   return (
     <div>
         <h1>Hola users</h1>
-        {JSON.stringify(Users)}
+        <Table users={Users}/>
     </div>
   )
 }
