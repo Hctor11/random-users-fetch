@@ -13,7 +13,7 @@ const Users = () => {
 
   return (
     <div>
-        <h1>Hola users</h1>
+        <h1>Usuarios</h1>
         <Table users={Users}/>
     </div>
   )

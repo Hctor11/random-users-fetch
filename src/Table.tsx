@@ -25,10 +25,12 @@ const Table = ({ users }:Props) => {
                             <td>
                                 <img src={user.picture.thumbnail} alt="image" />
                             </td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>{user.name.first}</td>
+                            <td>{user.name.last}</td>
+                            <td>{user.location.country}</td>
+                            <td><button>
+                                    delete
+                                </button></td>
                         </tr>
                     )
                 })
